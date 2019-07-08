@@ -1,0 +1,171 @@
+# depslib dependency file v1.0
+1447602908 source:f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\banco.cpp
+	"banco.hpp"
+	<eosim/core/entity.hpp>
+	<eosim/dist/numbergenerator.hpp>
+	<iostream>
+
+1447602838 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\banco.hpp
+	<eosim/core/model.hpp>
+	<eosim/utils/entityqueuefifo.hpp>
+	<eosim/core/renewable.hpp>
+	<eosim/dist/negexpdist.hpp>
+	<eosim/dist/lognormaldist.hpp>
+	<eosim/dist/normaldist.hpp>
+	<eosim/dist/uniformdist.hpp>
+	<eosim/statics/timeweighted.hpp>
+	<eosim/statics/observation.hpp>
+	<eosim/dist/mt19937.hpp>
+	<eosim/statics/timeseries.hpp>
+	<eosim/statics/timeweighted.hpp>
+	<eosim/statics/observation.hpp>
+	"cliente.hpp"
+	"eventoscliente.hpp"
+	"caja.hpp"
+	"registerDataTS.hpp"
+	"constantes.hpp"
+
+1166009966 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\model.hpp
+	<string>
+	<eosim/core/entity.hpp>
+	<eosim/dist/distribution.hpp>
+	<eosim/utils/beventmap.hpp>
+	<eosim/utils/ceventvector.hpp>
+
+1166009966 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\entity.hpp
+
+1166009968 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\distribution.hpp
+	<eosim/dist/numbergenerator.hpp>
+
+1166009970 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\numbergenerator.hpp
+
+1166009974 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\utils\beventmap.hpp
+	<eosim/core/bevent.hpp>
+	<map>
+	<string>
+
+1166009964 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\bevent.hpp
+	<string>
+
+1166009976 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\utils\ceventvector.hpp
+	<eosim/core/cevent.hpp>
+	<vector>
+
+1166009966 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\cevent.hpp
+
+1166009976 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\utils\entityqueuefifo.hpp
+	<eosim/utils/entityqueue.hpp>
+	<deque>
+
+1166009976 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\utils\entityqueue.hpp
+	<eosim/core/entity.hpp>
+
+1166009968 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\renewable.hpp
+	<eosim/core/bin.hpp>
+
+1166009964 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\bin.hpp
+
+1166009970 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\negexpdist.hpp
+	<eosim/dist/distribution.hpp>
+
+1166009970 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\lognormaldist.hpp
+	<eosim/dist/distribution.hpp>
+
+1166009970 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\normaldist.hpp
+	<eosim/dist/distribution.hpp>
+
+1166009972 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\uniformdist.hpp
+	<eosim/dist/distribution.hpp>
+
+1166009974 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\statics\timeweighted.hpp
+	<eosim/statics/histogram.hpp>
+
+1166009972 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\statics\histogram.hpp
+	<string>
+	<map>
+	<utility>
+
+1166009974 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\statics\observation.hpp
+	<eosim/statics/histogram.hpp>
+
+1166009970 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\mt19937.hpp
+	<eosim/dist/numbergenerator.hpp>
+
+1166009974 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\statics\timeseries.hpp
+	<eosim/statics/histogram.hpp>
+	<eosim/core/model.hpp>
+
+1447516274 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\cliente.hpp
+	<eosim/core/entity.hpp>
+
+1447596532 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\eventoscliente.hpp
+	<eosim/core/bevent.hpp>
+	<eosim/core/entity.hpp>
+	<string>
+
+1447516274 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\caja.hpp
+	<eosim/core/entity.hpp>
+
+1447516274 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\registerdatats.hpp
+	<eosim/core/bevent.hpp>
+	<eosim/core/entity.hpp>
+	<string>
+
+1447601810 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\constantes.hpp
+	<math.h>
+
+1447602876 source:f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\eventoscliente.cpp
+	"eventoscliente.hpp"
+	"banco.hpp"
+	"cliente.hpp"
+	<iostream>
+	<math.h>
+
+1447603100 source:f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\main.cpp
+	<eosim/dist/mt19937.hpp>
+	<eosim/core/experiment.hpp>
+	<iostream>
+	<fstream>
+	"banco.hpp"
+	"constantes.hpp"
+
+1166009966 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\experiment.hpp
+	<string>
+	<eosim/core/bcalendar.hpp>
+	<eosim/core/ccalendar.hpp>
+	<eosim/core/entity.hpp>
+	<eosim/dist/distmanager.hpp>
+	<eosim/dist/distribution.hpp>
+
+1166009964 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\bcalendar.hpp
+	<eosim/core/entity.hpp>
+	<eosim/utils/entityqueueordered.hpp>
+
+1166009978 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\utils\entityqueueordered.hpp
+	<eosim/utils/entityqueue.hpp>
+	<deque>
+
+1166009964 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\core\ccalendar.hpp
+	<eosim/core/cevent.hpp>
+	<eosim/utils/ceventvector.hpp>
+
+1166009968 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\dist\distmanager.hpp
+	<eosim/dist/numbergenerator.hpp>
+	<eosim/utils/distvector.hpp>
+
+1166009976 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\include\eosim\utils\distvector.hpp
+	<eosim/dist/distribution.hpp>
+	<vector>
+
+1447531552 f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\banco.cpp
+	"banco.hpp"
+	<eosim/core/entity.hpp>
+	<eosim/dist/numbergenerator.hpp>
+	<iostream>
+
+1447516272 source:f:\facultad\simulacion a eventos discretos\eosimulator\eosim1.1.1\demos\ej_15\p_c1\registerdatats.cpp
+	"registerDataTS.hpp"
+	"banco.hpp"
+	<iostream>
+	"constantes.hpp"
+

@@ -1,0 +1,247 @@
+# depslib dependency file v1.0
+1440982691 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\eventoscliente.cpp
+	"eventoscliente.hpp"
+	"banco.hpp"
+	"cliente.hpp"
+	<iostream>
+
+1440878292 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\eventoscliente.hpp
+	<eosim/core/bevent.hpp>
+	<eosim/core/entity.hpp>
+	<string>
+
+1166013564 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\bevent.hpp
+	<string>
+
+1166013566 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\entity.hpp
+
+1440978097 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\banco.hpp
+	<eosim/core/model.hpp>
+	<eosim/utils/entityqueuefifo.hpp>
+	<eosim/core/renewable.hpp>
+	<eosim/dist/negexpdist.hpp>
+	<eosim/statics/timeweighted.hpp>
+	<eosim/statics/observation.hpp>
+	<eosim/dist/mt19937.hpp>
+	"cliente.hpp"
+	"eventoscliente.hpp"
+	"caja.hpp"
+
+1166013566 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\model.hpp
+	<string>
+	<eosim/core/entity.hpp>
+	<eosim/dist/distribution.hpp>
+	<eosim/utils/beventmap.hpp>
+	<eosim/utils/ceventvector.hpp>
+
+1166013568 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\dist\distribution.hpp
+	<eosim/dist/numbergenerator.hpp>
+
+1166013570 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\dist\numbergenerator.hpp
+
+1166013574 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\utils\beventmap.hpp
+	<eosim/core/bevent.hpp>
+	<map>
+	<string>
+
+1166013576 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\utils\ceventvector.hpp
+	<eosim/core/cevent.hpp>
+	<vector>
+
+1166013566 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\cevent.hpp
+
+1166013576 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\utils\entityqueuefifo.hpp
+	<eosim/utils/entityqueue.hpp>
+	<deque>
+
+1166013576 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\utils\entityqueue.hpp
+	<eosim/core/entity.hpp>
+
+1166013568 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\renewable.hpp
+	<eosim/core/bin.hpp>
+
+1166013564 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\bin.hpp
+
+1166013570 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\dist\negexpdist.hpp
+	<eosim/dist/distribution.hpp>
+
+1166013574 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\statics\timeweighted.hpp
+	<eosim/statics/histogram.hpp>
+
+1166013572 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\statics\histogram.hpp
+	<string>
+	<map>
+	<utility>
+
+1166013574 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\statics\observation.hpp
+	<eosim/statics/histogram.hpp>
+
+1440975713 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\cliente.hpp
+	<eosim/core/entity.hpp>
+
+1440982616 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\main.cpp
+	<eosim/dist/mt19937.hpp>
+	<eosim/core/experiment.hpp>
+	<iostream>
+	<fstream>
+	"banco.cpp"
+
+1166013570 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\dist\mt19937.hpp
+	<eosim/dist/numbergenerator.hpp>
+
+1166013566 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\experiment.hpp
+	<string>
+	<eosim/core/bcalendar.hpp>
+	<eosim/core/ccalendar.hpp>
+	<eosim/core/entity.hpp>
+	<eosim/dist/distmanager.hpp>
+	<eosim/dist/distribution.hpp>
+
+1166013564 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\bcalendar.hpp
+	<eosim/core/entity.hpp>
+	<eosim/utils/entityqueueordered.hpp>
+
+1166013578 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\utils\entityqueueordered.hpp
+	<eosim/utils/entityqueue.hpp>
+	<deque>
+
+1166013564 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\core\ccalendar.hpp
+	<eosim/core/cevent.hpp>
+	<eosim/utils/ceventvector.hpp>
+
+1166013568 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\dist\distmanager.hpp
+	<eosim/dist/numbergenerator.hpp>
+	<eosim/utils/distvector.hpp>
+
+1166013576 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\utils\distvector.hpp
+	<eosim/dist/distribution.hpp>
+	<vector>
+
+1440975719 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\caja.hpp
+	<eosim/core/entity.hpp>
+
+1440982685 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej6\bank_3.9.4\banco.cpp
+	"banco.hpp"
+	<eosim/core/entity.hpp>
+	<eosim/dist/numbergenerator.hpp>
+	<iostream>
+
+1441063520 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\eventoscliente.cpp
+	"eventoscliente.hpp"
+	"banco.hpp"
+	"cliente.hpp"
+	<iostream>
+
+1440878292 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\eventoscliente.hpp
+	<eosim/core/bevent.hpp>
+	<eosim/core/entity.hpp>
+	<string>
+
+1440978097 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\banco.hpp
+	<eosim/core/model.hpp>
+	<eosim/utils/entityqueuefifo.hpp>
+	<eosim/core/renewable.hpp>
+	<eosim/dist/negexpdist.hpp>
+	<eosim/statics/timeweighted.hpp>
+	<eosim/statics/observation.hpp>
+	<eosim/dist/mt19937.hpp>
+	"cliente.hpp"
+	"eventoscliente.hpp"
+	"caja.hpp"
+
+1440975713 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\cliente.hpp
+	<eosim/core/entity.hpp>
+
+1440975719 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\caja.hpp
+	<eosim/core/entity.hpp>
+
+1440989894 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\main.cpp
+	<eosim/dist/mt19937.hpp>
+	<eosim/core/experiment.hpp>
+	<iostream>
+	<fstream>
+	"banco.cpp"
+
+1440982685 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_6\p_f\banco.cpp
+	"banco.hpp"
+	<eosim/core/entity.hpp>
+	<eosim/dist/numbergenerator.hpp>
+	<iostream>
+
+1445201414 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\banco.cpp
+	"banco.hpp"
+	<eosim/core/entity.hpp>
+	<eosim/dist/numbergenerator.hpp>
+	<iostream>
+
+1445201414 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\banco.hpp
+	<eosim/core/model.hpp>
+	<eosim/utils/entityqueuefifo.hpp>
+	<eosim/core/renewable.hpp>
+	<eosim/dist/negexpdist.hpp>
+	<eosim/dist/lognormaldist.hpp>
+	<eosim/statics/timeweighted.hpp>
+	<eosim/statics/observation.hpp>
+	<eosim/dist/mt19937.hpp>
+	<eosim/statics/timeseries.hpp>
+	<eosim/statics/timeweighted.hpp>
+	<eosim/statics/observation.hpp>
+	"cliente.hpp"
+	"eventoscliente.hpp"
+	"caja.hpp"
+	"registerDataTS.hpp"
+	"constantes.hpp"
+
+1166013570 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\dist\lognormaldist.hpp
+	<eosim/dist/distribution.hpp>
+
+1166013574 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\include\eosim\statics\timeseries.hpp
+	<eosim/statics/histogram.hpp>
+	<eosim/core/model.hpp>
+
+1445201414 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\cliente.hpp
+	<eosim/core/entity.hpp>
+
+1445201414 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\eventoscliente.hpp
+	<eosim/core/bevent.hpp>
+	<eosim/core/entity.hpp>
+	<string>
+
+1445201414 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\caja.hpp
+	<eosim/core/entity.hpp>
+
+1445201414 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\registerdatats.hpp
+	<eosim/core/bevent.hpp>
+	<eosim/core/entity.hpp>
+	<string>
+
+1445202496 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\constantes.hpp
+	<math.h>
+
+1445201414 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\eventoscliente.cpp
+	"eventoscliente.hpp"
+	"banco.hpp"
+	"cliente.hpp"
+	<iostream>
+	<math.h>
+
+1445201637 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\main.cpp
+	<eosim/dist/mt19937.hpp>
+	<eosim/core/experiment.hpp>
+	<iostream>
+	<fstream>
+	"banco.hpp"
+	"constantes.hpp"
+
+1445129795 c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\banco.cpp
+	"banco.hpp"
+	<eosim/core/entity.hpp>
+	<eosim/dist/numbergenerator.hpp>
+	<iostream>
+
+1445201414 source:c:\users\germanruiz\desktop\eosim1.1.1\eosimulator\eosim1.1.1\demos\gr11\ej_11\p_b2\registerdatats.cpp
+	"registerDataTS.hpp"
+	"banco.hpp"
+	<iostream>
+	"constantes.hpp"
+

@@ -1,0 +1,154 @@
+#include "eventoscliente.hpp"
+#include "banco.hpp"
+#include "cliente.hpp"
+#include <iostream>
+#include <math.h>
+
+using namespace eosim::core;
+
+// en el constructor se utiliza el identificador definido en eventoscliente.hpp
+ClienteFeeder::ClienteFeeder(Model& model): BEvent(clienteF, model) {}
+
+ClienteFeeder::~ClienteFeeder() {}
+
+void ClienteFeeder::eventRoutine(Entity* who) {
+    Cliente* c = dynamic_cast<Cliente*>(who);
+	// se anuncia la llegada del cliente
+	std::string tipo = c->retiraDinero ? "Retiro" : "Otro";
+	std::cout << "Llega el cliente numero " << c->nro << " de tipo '" << tipo << "'. Tiempo: " << who->getClock() << "\n";
+	// se castea owner a un Banco
+	Banco& b = dynamic_cast<Banco&>(owner);
+
+	//Elegir caja disponible o esperar en cola q0
+    Cliente* cliente = dynamic_cast<Cliente*>(who);
+    int numeroCaja = -1;
+    for (unsigned int i = 0; i < b.cantCajas; i++)
+    {
+        Caja* caja = b.cajas[i];
+        if (caja->disponible) { //Agarro la primer caja disponible
+            numeroCaja = i;
+            break;
+        }
+    }
+
+    if (numeroCaja == -1) //No hay caja disponible, poner el cliente a esperar en qInicial
+    {
+        b.qInicial.push(who);
+        std::cout << "El cliente numero " << cliente->nro << " pasa a esperar en la cola. Tiempo: " << b.getSimTime() << "\n\n";
+        //Registro largo de la cola
+        b.lColaCajasTW.log(b.qInicial.size());
+    }
+    else // Poner al cliente en la caja elegida para ser atendido
+    {
+        cliente->cajaElegida = numeroCaja;
+        Caja* caja = b.cajas[numeroCaja];
+        caja->disponible = false;
+        std::cout << "La caja " << numeroCaja + 1 << " atiende al cliente numero " << cliente->nro << ". Tiempo: " << b.getSimTime() << "\n\n";
+        //Se toma el tiempo de ir a la caja en 10 seg agregandolo al tiempo de servicio
+        if (cliente->retiraDinero)
+            b.schedule(b.distTiempoServicioR.sample() + 10, cliente, salidaC);
+        else
+            b.schedule(b.distTiempoServicioNR.sample() + 10, cliente, salidaC);
+
+        //Registro tiempo de espera para este cliente igual a 0
+        b.tEsperaO.log(0);
+    }
+
+    // Regristro datos sobre la cantidad de clientes
+	b.cantClientesActuales++;
+	b.cantClientesTW.log(b.cantClientesActuales);
+
+    // creo proximo cliente y se agenda el arribo del nuevo cliente
+    // 1 de cada 3 son retiro
+    double probRetiro = b.distProbRetiro.sample();
+	Cliente* nuevoCliente = new Cliente(probRetiro > ((double)1/3) ? false : true);
+	nuevoCliente->nro = ++b.nroCliente;
+	//b.schedule(b.distArribosClientes.sample(), nuevoCliente, clienteF);
+
+	//Agendo proximo con el thinning
+	double t, u, m,result;
+	m = maxRateArribos;
+	t = b.getSimTime();
+	do
+	{
+	    //La distribucion de arribos es nexexp con media 1/m
+        u = b.distArribosClientes.sample();
+		t = t + u;
+
+		double rnd = b.distProbThinning.sample();
+		double f = fun(t);
+		if (f == -1){
+			result =  -1;
+			break;
+		}
+		if(rnd < f/m){
+			result = t -  b.getSimTime();
+			break;
+		}
+	} while (true);
+	if (result == -1){
+        //std::cout << "result -1" << "\n"; Error
+	}else{
+        b.schedule(result, nuevoCliente, clienteF);
+	}
+}
+
+double ClienteFeeder::fun(double t)
+{
+	if (t < 3600.0)
+		return arrayRateArribos[0];
+	else if(t < 2.0*3600.0)
+		return arrayRateArribos[1];
+	else if(t < 3.0*3600.0)
+		return arrayRateArribos[2];
+	else if (t < 4.0*3600.0)
+		return arrayRateArribos[3];
+	else if (t < 5.0*3600.0)
+        return arrayRateArribos[4];
+    else if (t < 6.0*3600.0)
+        return arrayRateArribos[5];
+    else
+		return -1;
+}
+
+// en el constructor se utiliza el identificador definido en eventoscliente.hpp
+SalidaCliente::SalidaCliente(Model& model): BEvent(salidaC, model) {}
+
+SalidaCliente::~SalidaCliente() {}
+
+void SalidaCliente::eventRoutine(Entity* who) {
+    Banco& b = dynamic_cast<Banco&>(owner);
+    Cliente* cliente = dynamic_cast<Cliente*>(who);
+    std::cout << "El cliente numero " << cliente->nro << " de la caja " << cliente->cajaElegida + 1 << " sale del banco. Tiempo: " << b.getSimTime() << "\n";
+    if (!b.qInicial.empty()) {
+        // Agarro al primero de la cola
+        Cliente* nuevoClienteCaja = dynamic_cast<Cliente*>(b.qInicial.pop());
+        nuevoClienteCaja->cajaElegida = cliente->cajaElegida;
+        std::cout << "La caja " << nuevoClienteCaja->cajaElegida + 1 << " pasa a atender el cliente numero " << nuevoClienteCaja->nro << ". Tiempo: " << b.getSimTime() << "\n\n";
+
+        //Registro tiempo de espera en la cola que tuvo el cliente
+        b.tEsperaO.log(b.getSimTime() - nuevoClienteCaja->getClock());
+
+        if (nuevoClienteCaja->retiraDinero)
+            b.schedule(b.distTiempoServicioR.sample() + 10, nuevoClienteCaja, salidaC);
+        else
+            b.schedule(b.distTiempoServicioNR.sample() + 10, nuevoClienteCaja, salidaC);
+    }
+    else {
+        b.cajas[cliente->cajaElegida]->disponible = true;
+        std::cout << "La caja " << cliente->cajaElegida + 1 << " queda disponible. Tiempo: " << b.getSimTime() << "\n\n";
+    }
+
+    // Registro datos del largo de la cola
+    b.lColaCajasTW.log(b.qInicial.size());
+
+    // Registro datos sobre la cantidad de clientes
+    b.cantClientesActuales--;
+	b.cantClientesTW.log(b.cantClientesActuales);
+
+    delete who;
+}
+
+
+
+
